@@ -1,0 +1,15 @@
+<div class="cart-item">
+    <img [src]="item.imageUrl" alt="{{ item.name }}" />
+    <div class="item-details">
+      <h4>{{ item.name }}</h4>
+      <p>Size: {{ item.size }}, Color: {{ item.color }}, Material: {{ item.material }}</p>
+      <p>Seller: {{ item.seller }}</p>
+      <button (click)="remove.emit()">Remove</button>
+      <button (click)="saveForLater.emit()">Save for later</button>
+    </div>
+    <div class="price-section">
+      <p>{{ item.price | currency }}</p>
+      <input type="number" [(ngModel)]="item.qty" min="1" />
+    </div>
+  </div>
+  

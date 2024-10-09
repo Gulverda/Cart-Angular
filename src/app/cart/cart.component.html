@@ -1,0 +1,14 @@
+<div class="cart-container">
+    <h2>My cart ({{ cartItems.length }})</h2>
+    <div *ngFor="let item of cartItems; let i = index">
+      <app-cart-item [item]="item" (remove)="removeItem(i)" (saveForLater)="saveForLater(i)"></app-cart-item>
+    </div>
+  
+    <button class="back-button">Back to shop</button>
+  </div>
+  
+  <div class="summary-section">
+    <app-coupon></app-coupon>
+    <app-summary [cartItems]="cartItems"></app-summary>
+  </div>
+  
