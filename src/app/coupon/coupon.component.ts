@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-coupon',
+  standalone: true,
+  imports: [FormsModule, CommonModule], // Add FormsModule to the imports array
   template: `
     <div>
       <h3>Coupon Code</h3>

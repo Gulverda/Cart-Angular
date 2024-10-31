@@ -1,7 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-summary',
+  imports: [CommonModule],
+  standalone: true,
   template: `
     <div>
       <h3>Summary</h3>
